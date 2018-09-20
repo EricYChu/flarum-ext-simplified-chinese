@@ -19,15 +19,12 @@ core:
       colored_header_label: 彩色标头
       colors_heading: 颜色
       colors_text: "选择两种颜色作为论坛主色调。第一种作为突出显示颜色，第二种作为背景元素样式。"
-      custom_footer_heading: 客制化页脚
-      custom_footer_text: => core.ref.custom_footer_text
       custom_header_heading: 客制化标头
       custom_header_text: "添加要显示在页面顶部的，在 Flarum 自有标头之上的 HTML。"
       custom_styles_heading: 客制化样式
       custom_styles_text: 添加 LESS/CSS 代码以客制化论坛外观，此设置将覆盖 Flarum 默认样式。
       dark_mode_label: 暗黑模式
       edit_css_button: 编辑客制化 CSS
-      edit_footer_button: => core.ref.custom_footer_title
       edit_header_button: 编辑客制化标头
       enter_hex_message: 请键入十六进制颜色代码。
       favicon_heading: 站点图标
@@ -53,19 +50,20 @@ core:
 
     # These translations are used in the Dashboard page.
     dashboard:
-      help_link: 取得帮助
+      beta_warning_text: "This <strong>beta software</strong> is provided primarily so that you can help us test it and make it better; it should not be used in production."
+      contributing_text: "Want to look for bugs and contribute? Read the <a>Contributing docs</a>."
+      extension_text: "Interested in developing extensions? Read the <a>Extension docs</a>."
+      features_text: "Got an idea to improve a feature? Tell us about it under the <a>Features tag</a>."
+      support_text: "Found a bug? Please report it in our forum, under the <a>Support tag</a>."
+      troubleshooting_text: "Having problems? Follow the instructions in the <a>Troubleshooting docs</a>."
+      version_text: "Thanks for trying out Flarum! You are running version {version}."
+      welcome_text: "Welcome to Flarum Beta!"
 
     # These translations are used in the Edit Custom CSS modal dialog.
     edit_css:
       customize_text: "通过增加 LESS/CSS 代码以客制化论坛外观，此设置将覆盖 Flarum <a>默认样式</a>。"
       submit_button: => core.ref.save_changes
       title: 编辑客制化 CSS
-
-    # These translations are used in the Edit Custom Footer modal dialog.
-    edit_footer:
-      customize_text: => core.ref.custom_footer_text
-      submit_button: => core.ref.save_changes
-      title: => core.ref.custom_footer_title
 
     # These translations are used in the Edit Group modal dialog.
     edit_group:
@@ -102,6 +100,15 @@ core:
       text: 配置 SMTP 设置及论坛发信地址
       username_label: => core.ref.username
 
+    # These translations are used in the sms page of the admin interface.
+    sms:
+      heading: => core.ref.sms
+      text: 配置短信设置以使用短信发送功能。
+      driver_label: Driver
+      twilio_heading: Twilio
+      twilio_verification_api_key: Verification API Key
+      submit_button: => core.ref.save_changes
+
     # These translations are used in the Extensions page.
     extensions:
       add_button: 添加延伸套件
@@ -126,6 +133,8 @@ core:
       dashboard_text: 论坛数据综览
       email_button: => core.ref.email
       email_text: "配置论坛邮箱设置。"
+      sms_button: => core.ref.sms
+      sms_text: "配置论坛短信设置。"
       extensions_button: 延伸套件
       extensions_text: 为你的论坛添加额外功能
       permissions_button: 权限设置
@@ -178,6 +187,7 @@ core:
 
     # These translations are used in the Change Email modal dialog.
     change_email:
+      email_placeholder: => core.ref.email
       confirmation_message: => core.ref.confirmation_email_sent
       confirm_password_placeholder: => core.ref.confirm_password
       dismiss_button: => core.ref.okay
@@ -185,11 +195,25 @@ core:
       submit_button: => core.ref.save_changes
       title: => core.ref.change_email
 
+    # These translations are used in the Change Email modal dialog.
+    change_phone:
+      confirmation_message: => core.ref.confirmation_phone_changed
+      confirm_password_placeholder: => core.ref.confirm_password
+      dismiss_button: => core.ref.okay
+      incorrect_password_message: 你输入的当前密码不正确。
+      submit_button: => core.ref.save_changes
+      verify_button: => core.ref.verify
+      title: => core.ref.change_phone
+
     # These translations are used in the Change Password modal dialog.
     change_password:
       send_button: 发送密码重设邮件
       text: 点击下面的按钮并检查邮件中的链接以重设密码。
       title: => core.ref.change_password
+      old_password_placeholder: => core.ref.old_password
+      new_password_placeholder: => core.ref.new_password
+      dismiss_button: => core.ref.okay
+      incorrect_password_message: 你输入的当前密码不正确。
 
     # These translations are used by the composer controls.
     composer:
@@ -197,7 +221,6 @@ core:
       exit_full_screen_tooltip: 退出全屏幕
       full_screen_tooltip: 全屏幕
       minimize_tooltip: 最小化
-      preview_tooltip: 预览
 
     # These translations are used by the composer when starting a discussion.
     composer_discussion:
@@ -258,12 +281,20 @@ core:
     # These translations are used in the Forgot Password modal dialog.
     forgot_password:
       dismiss_button: => core.ref.okay
-      email_placeholder: => core.ref.email
-      email_sent_message: 已将包含密码重设链接的邮件发送至该邮箱，若未收到请检查垃圾箱。
-      not_found_message: 没有使用此邮箱地址注册的用户。
+      phone_sent_message: 我们发送了一封用于重置密码的包含 6 位验证码的短信到你的手机。
+      not_found_message: 没有使用此手机号注册的用户。
       submit_button: 重设密码
-      text: 请键入邮箱地址，我们将发送密码重设链接至该邮箱。
+      text: 请键入手机号码，我们将发送 6 位数字的验证码到你的手机。
       title: 忘记密码
+
+    # These translations are used in the Reset Password modal dialog.
+    reset:
+      confirm_password_placeholder: => core.ref.confirm_password
+      password_placeholder: => core.ref.password
+      submit_button: 重置密码
+      title: => core.ref.reset_your_password
+      password_has_reset_message: "你的密码已经重置完成。"
+      dismiss_button: => core.ref.okay
 
     # These translations are used in the header and session dropdown menu.
     header:
@@ -303,6 +334,7 @@ core:
       submit_button: => core.ref.log_in
       title: => core.ref.log_in
       username_or_email_placeholder: 用户名或邮箱
+      username_or_phone_or_email_placeholder: 用户名、手机号或邮箱
 
     # These translations are used by the Notifications dropdown, a.k.a. "the bell".
     notifications:
@@ -355,6 +387,7 @@ core:
     settings:
       account_heading: 帐户
       change_email_button: => core.ref.change_email
+      change_phone_button: => core.ref.change_phone
       change_password_button: => core.ref.change_password
       notifications_heading: => core.ref.notifications
       notify_by_email_heading: => core.ref.email
@@ -371,6 +404,7 @@ core:
       log_in_text: "已有帐户？ <a>登录</a>"
       password_placeholder: => core.ref.password
       submit_button: => core.ref.sign_up
+      next_button: => core.ref.next_step
       title: => core.ref.sign_up
       username_placeholder: => core.ref.username
       welcome_text: "欢迎造访，{username}！"
@@ -380,6 +414,7 @@ core:
       avatar_remove_button: 移除头像
       avatar_upload_button: 上传头像
       avatar_upload_tooltip: 上传新头像
+      bio_placeholder: Write something about yourself
       discussions_link: => core.ref.discussions
       in_discussion_text: "于 {discussion}"
       joined_date_text: "加入于 {ago}"
@@ -430,6 +465,258 @@ core:
       three_text: "{first}, {second} 以及 {third}"
       two_text: "{first} 及 {second}"
 
+    phone_verification:
+      phone_number_placeholder: => core.ref.phone_number
+      verification_code_placeholder: => core.ref.verification_code
+      verification_text: 安全起见，我们需要确认是由你本人注册。我们将发送 6 位验证码到你的手机。
+      verification_message_sent_message: "验证码已发送到你的手机 {phone}。"
+
+    countries:
+      af: Afghanistan
+      al: Albania
+      dz: Algeria
+      as: American Samoa
+      ad: Andorra
+      ao: Angola
+      ai: Anguilla
+      aq: Antarctica
+      ag: Antigua & Barbuda
+      ar: Argentina
+      am: Armenia
+      aw: Aruba
+      au: Australia
+      at: Austria
+      az: Azerbaijan
+      bs: Bahamas
+      bh: Bahrain
+      bd: Bangladesh
+      bb: Barbados
+      by: Belarus
+      be: Belgium
+      bz: Belize
+      bj: Benin
+      bm: Bermuda
+      bt: Bhutan
+      bo: Bolivia
+      ba: Bosnia & Herzegovina
+      bw: Botswana
+      br: Brazil
+      io: British Indian Ocean Territory
+      vg: British Virgin Islands
+      bn: Brunei
+      bg: Bulgaria
+      bf: Burkina Faso
+      bi: Burundi
+      kh: Cambodia
+      cm: Cameroon
+      ca: Canada
+      cv: Cape Verde
+      ky: Cayman Islands
+      cf: Central African Republic
+      td: Chad
+      cl: Chile
+      cn: 中国
+      cx: Christmas Island
+      cc: Cocos Islands
+      co: Colombia
+      km: Comoros
+      cg: Congo - Brazzaville
+      cd: Congo - Kinshasa
+      ck: Cook Islands
+      cr: Costa Rica
+      hr: Croatia
+      cu: Cuba
+      cw: Curacao
+      cy: Cyprus
+      cz: Czech Republic
+      dk: Denmark
+      dj: Djibouti
+      dm: Dominica
+      do: Dominican Republic
+      tl: East Timor
+      ec: Ecuador
+      eg: Egypt
+      sv: El Salvador
+      gq: Equatorial Guinea
+      er: Eritrea
+      ee: Estonia
+      et: Ethiopia
+      fk: Falkland Islands
+      fo: Faroe Islands
+      fj: Fiji
+      fi: Finland
+      fr: France
+      gf: French Guiana
+      pf: French Polynesia
+      ga: Gabon
+      gm: Gambia
+      ge: Georgia
+      de: Germany
+      gh: Ghana
+      gi: Gibraltar
+      gr: Greece
+      gl: Greenland
+      gd: Grenada
+      gp: Guadeloupe
+      gu: Guam
+      gt: Guatemala
+      gg: Guernsey
+      gn: Guinea
+      gw: Guinea-Bissau
+      gy: Guyana
+      ht: Haiti
+      hn: Honduras
+      hk: 香港
+      hu: Hungary
+      is: Iceland
+      in: India
+      id: Indonesia
+      int: 国际
+      ir: Iran
+      iq: Iraq
+      ie: Ireland
+      im: Isle of Man
+      il: Israel
+      it: Italy
+      ci: Ivory Coast
+      jm: Jamaica
+      jp: 日本
+      je: Jersey
+      jo: Jordan
+      kz: Kazakhstan
+      ke: Kenya
+      ki: Kiribati
+      xk: Kosovo
+      kw: Kuwait
+      kg: Kyrgyzstan
+      la: Laos
+      lv: Latvia
+      lb: Lebanon
+      ls: Lesotho
+      lr: Liberia
+      ly: Libya
+      li: Liechtenstein
+      lt: Lithuania
+      lu: Luxembourg
+      mo: 澳门
+      mk: Macedonia
+      mg: Madagascar
+      mw: Malawi
+      my: Malaysia
+      mv: Maldives
+      ml: Mali
+      mt: Malta
+      mh: Marshall Islands
+      mq: Martinique
+      mr: Mauritania
+      mu: Mauritius
+      yt: Mayotte
+      mx: Mexico
+      fm: Micronesia
+      md: Moldova
+      mc: Monaco
+      mn: Mongolia
+      me: Montenegro
+      ms: Montserrat
+      ma: Morocco
+      mz: Mozambique
+      mm: Myanmar
+      na: Namibia
+      nr: Nauru
+      np: Nepal
+      nl: Netherlands
+      an: Netherlands Antilles
+      nc: New Caledonia
+      nz: New Zealand
+      ni: Nicaragua
+      ne: Niger
+      ng: Nigeria
+      nu: Niue
+      kp: North Korea
+      mp: Northern Mariana Islands
+      no: Norway
+      om: Oman
+      pk: Pakistan
+      pw: Palau
+      ps: Palestine
+      pa: Panama
+      pg: Papua New Guinea
+      py: Paraguay
+      pe: Peru
+      ph: Philippines
+      pn: Pitcairn
+      pl: Poland
+      pt: Portugal
+      pr: Puerto Rico
+      qa: Qatar
+      re: Reunion
+      ro: Romania
+      ru: Russia
+      rw: Rwanda
+      ws: Samoa
+      sm: San Marino
+      st: Sao Tome & Príncipe
+      sa: Saudi Arabia
+      sn: Senegal
+      rs: Serbia
+      sc: Seychelles
+      sl: Sierra Leone
+      sg: 新加坡
+      sx: Sint Maarten
+      sk: Slovakia
+      si: Slovenia
+      sb: Solomon Islands
+      so: Somalia
+      za: South Africa
+      kr: South Korea
+      ss: South Sudan
+      es: Spain
+      lk: Sri Lanka
+      bl: St. Barthelemy
+      sh: St. Helena
+      kn: St. Kitts & Nevis
+      lc: St. Lucia
+      mf: St. Martin
+      pm: St. Pierre & Miquelon
+      vc: St. Vincent & Grenadines
+      sd: Sudan
+      sr: Suriname
+      sj: Svalbard & Jan Mayen
+      sz: Swaziland
+      se: Sweden
+      ch: Switzerland
+      sy: Syria
+      tw: 台湾
+      tj: Tajikistan
+      tz: Tanzania
+      th: Thailand
+      tg: Togo
+      tk: Tokelau
+      to: Tonga
+      tt: Trinidad & Tobago
+      tn: Tunisia
+      tr: Turkey
+      tm: Turkmenistan
+      tc: Turks & Caicos Islands
+      tv: Tuvalu
+      vi: U.S. Virgin Islands
+      ug: Uganda
+      ua: Ukraine
+      ae: United Arab Emirates
+      gb: United Kingdom
+      us: United States
+      uy: Uruguay
+      uz: Uzbekistan
+      vu: Vanuatu
+      va: Vatican
+      ve: Venezuela
+      vn: Vietnam
+      wf: Wallis & Futuna
+      eh: Western Sahara
+      ye: Yemen
+      zm: Zambia
+      zw: Zimbabwe
+
   # Translations in this namespace are used in views other than Flarum's normal JS client.
   views:
 
@@ -444,36 +731,26 @@ core:
       next_page_button: => core.ref.next_page
       previous_page_button: 上一页
 
-    # Translations in this namespace are displayed when Flarum encounters an error.
-    error:
-      403_message: 你没有权限访问此页面
-      404_message: 你访问的页面不存在
-      404_return_link: "返回 {forum}"
-      500_message: 加载页面时出错。
-      503_message: "{forum} 正在维护中，请稍后再访问。"
-
     # Translations in this namespace are displayed by the basic HTML discussion index.
     index:
       all_discussions_heading: => core.ref.all_discussions
       next_page_button: => core.ref.next_page
       previous_page_button: => core.ref.previous_page
 
-    # Translations in this namespace are displayed by the Log Out confirmation interface.
-    log_out:
-      log_out_button: => core.ref.log_out
-      log_out_confirmation: "你确定要注销 {forum}?"
-      title: => core.ref.log_out
-
     # Translations in this namespace are displayed by the Reset Password interface.
-    reset_password:
+    reset:
       confirm_password_label: => core.ref.confirm_password
-      new_password_label: 新密码
-      submit_button: 重设密码
+      password_label: => core.ref.password
+      submit_button: 重置密码
       title: => core.ref.reset_your_password
 
   # Translations in this namespace are used in messages output by the API.
   api:
     invalid_username_message: "用户名仅能包含字母、数字及横线"
+    invalid_phone_message:　"此手机号不能被用于验证。"
+    failed_send_verification_code_message: "发送验证码失败，请重试。"
+    invalid_verification_code_message: 验证码无效。
+    phone_not_verified_message: 此手机号未被验证。
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
@@ -525,19 +802,20 @@ core:
   ref:
     all_discussions: 全部贴文
     change_email: 更改邮箱
+    change_phone: 更改手机号
     change_password: 更改密码
-    color: 颜色
     confirm_password: 确认密码
     confirmation_email_sent: "验证邮件已发送至 {email}，若未收到请检查垃圾箱。"
-    custom_footer_text: 添加 HTML 代码显示于页面底部。
-    custom_footer_title: 编辑客制化页脚
-    custom_header_text: "添加要显示在页面顶部的，在 Flarum 自有标头之上的 HTML。"
-    custom_header_title: 编辑客制化标头
+    confirmation_phone_changed: "Your phone number has been changed to {country_code} {phone_number}."
     delete: 删除
     delete_forever: 永久删除
     discussions: 贴文
     edit: 编辑
     email: 邮箱
+    sms: 短信
+    phone: 手机
+    verification_code: 验证码
+    phone_number: 手机号
     load_more: 加载更多
     log_in: 登录
     log_out: 注销
@@ -546,12 +824,9 @@ core:
     notifications: 通知
     okay: 好                                     # Referenced by flarum-tags.yml
     password: 密码
-    posts: 贴文
-    remove: 移除
-    previous_page: 上一页
     rename: 重命名
     reply: 回复                                 # Referenced by flarum-mentions.yml
-    reset_your_password: 重设密码
+    reset_your_password: 重置密码
     restore: 还原
     save_changes: 保存更改                   # Referenced by flarum-tags.yml
     settings: 设置
@@ -562,6 +837,13 @@ core:
     users: 用户
     write_a_reply: 撰写回复...
     you: 你                                     # Referenced by flarum-likes.yml, flarum-mentions.yml
+    old_password: 当前密码
+    new_password: 新密码
+    verify: 验证
+
+  ##
+  # GROUP NAMES - These keys are translated at the back end.
+  ##
 
   # Translations in this namespace are used to translate default group names.
   group:
@@ -569,7 +851,7 @@ core:
     admins: 管理员
     guest: 访客
     guests: 访客
-    member: 注册会员
-    members: 注册会员
+    member: 注册用户
+    members: 注册用户
     mod: 版主
     mods: 版主
