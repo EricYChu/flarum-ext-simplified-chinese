@@ -281,8 +281,8 @@ core:
     # These translations are used in the Forgot Password modal dialog.
     forgot_password:
       dismiss_button: => core.ref.okay
-      phone_sent_message: 我们发送了一封用于重置密码的包含 6 位验证码的短信到你的手机。
-      not_found_message: 没有使用此手机号注册的用户。
+      phone_sent_message: 我们发送了 6 位数字的验证码到你的手机用以重设密码。
+      not_found_message: 没有使用此手机号码注册的用户。
       submit_button: 重设密码
       text: 请键入手机号码，我们将发送 6 位数字的验证码到你的手机。
       title: 忘记密码
@@ -291,9 +291,9 @@ core:
     reset:
       confirm_password_placeholder: => core.ref.confirm_password
       password_placeholder: => core.ref.password
-      submit_button: 重置密码
+      submit_button: 重设密码
       title: => core.ref.reset_your_password
-      password_has_reset_message: "你的密码已经重置完成。"
+      password_has_reset_message: "你的密码已经重设完成。"
       dismiss_button: => core.ref.okay
 
     # These translations are used in the header and session dropdown menu.
@@ -334,7 +334,7 @@ core:
       submit_button: => core.ref.log_in
       title: => core.ref.log_in
       username_or_email_placeholder: 用户名或邮箱
-      username_or_phone_or_email_placeholder: 用户名、手机号或邮箱
+      username_or_phone_or_email_placeholder: 用户名、手机号码或邮箱
 
     # These translations are used by the Notifications dropdown, a.k.a. "the bell".
     notifications:
@@ -468,7 +468,7 @@ core:
     phone_verification:
       phone_number_placeholder: => core.ref.phone_number
       verification_code_placeholder: => core.ref.verification_code
-      verification_text: 安全起见，我们需要确认是由你本人注册。我们将发送 6 位验证码到你的手机。
+      verification_text: 安全起见，我们需要确认是由你本人注册。我们将发送 6 位数字的验证码到你的手机。
       verification_message_sent_message: "验证码已发送到你的手机 {phone}。"
 
     countries:
@@ -741,16 +741,16 @@ core:
     reset:
       confirm_password_label: => core.ref.confirm_password
       password_label: => core.ref.password
-      submit_button: 重置密码
+      submit_button: 重设密码
       title: => core.ref.reset_your_password
 
   # Translations in this namespace are used in messages output by the API.
   api:
     invalid_username_message: "用户名仅能包含字母、数字及横线"
-    invalid_phone_message:　"此手机号不能被用于验证。"
+    invalid_phone_message:　"此手机号码不能被用于验证。"
     failed_send_verification_code_message: "发送验证码失败，请重试。"
     invalid_verification_code_message: 验证码无效。
-    phone_not_verified_message: 此手机号未被验证。
+    phone_not_verified_message: 此手机号码未被验证。
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
@@ -802,7 +802,7 @@ core:
   ref:
     all_discussions: 全部贴文
     change_email: 更改邮箱
-    change_phone: 更改手机号
+    change_phone: 更改手机号码
     change_password: 更改密码
     confirm_password: 确认密码
     confirmation_email_sent: "验证邮件已发送至 {email}，若未收到请检查垃圾箱。"
@@ -815,7 +815,7 @@ core:
     sms: 短信
     phone: 手机
     verification_code: 验证码
-    phone_number: 手机号
+    phone_number: 手机号码
     load_more: 加载更多
     log_in: 登录
     log_out: 注销
@@ -826,7 +826,7 @@ core:
     password: 密码
     rename: 重命名
     reply: 回复                                 # Referenced by flarum-mentions.yml
-    reset_your_password: 重置密码
+    reset_your_password: 重设密码
     restore: 还原
     save_changes: 保存更改                   # Referenced by flarum-tags.yml
     settings: 设置

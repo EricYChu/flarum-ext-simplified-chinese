@@ -1,5 +1,3 @@
-# https://github.com/flarum/flarum-ext-english/blob/master/locale/validation.yml
-
 validation:
   accepted: ":attribute 必须接受"
   active_url: ":attribute 不是合法的 URL"
@@ -76,6 +74,9 @@ validation:
     username: 用户
     password: 密码
     email: 邮箱
+    phone: 手机
+    phone_number: 手机号码
+    verification_code: 验证码
     title: 标题
     content: 正文
     name_singular: 单数名称
