@@ -101,3 +101,32 @@ flarum-tags:
     create_tag: 添加节点
     name: 节点名称
     tags: 节点
+
+  tag_name:
+    support: 支持
+    feedback: 反馈
+    official: 官方
+    wallet: 钱包
+    video: 视频
+    animation: 动画
+    movie: 电影
+    graphic: 图像
+    illustration: 插画
+    picture-book: 绘本
+    comic: 漫画
+    gaming: 游戏
+    literature: 文学
+    novel: 小说
+    poem: 诗歌
+    script: 剧本
+    music: 音乐
+    misc: 其他
+    design: 设计
+    features: 特色
+    events: 活动
+    services: 服务
+
+  tag_description:
+    support: 使用 ACGN 产品时遇到的问题都可以在这里提问哦。
+    feedback: 大家可以在这里讨论 ACGN 产品的功能特性和设计。
+    official: ACG Network 的相关话题。
