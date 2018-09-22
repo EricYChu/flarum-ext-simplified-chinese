@@ -855,4 +855,14 @@ core:
     members: 注册用户
     mod: 版主
     mods: 版主
-  
+
+  link:
+    home: 首页
+    presales: 预售
+    features: 特性
+    team: 团队
+    faq: 常见问题
+    whitepaper: 白皮书
+    blog: 博客
+    community: 社区
+
