@@ -1,8 +1,0 @@
-clarkwinkelmann-high-contrast:
-    forum:
-        settings:
-            section:
-                title: 仅适用于高端用户
-
-            high-contrast:
-                label: 启用高对比度模式

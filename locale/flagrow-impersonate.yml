@@ -1,8 +1,0 @@
-flagrow-impersonate:
-    admin:
-        permissions:
-            login: 以其他身分登录
-
-    forum:
-        user_controls:
-            impersonate_button: 伪装身分
