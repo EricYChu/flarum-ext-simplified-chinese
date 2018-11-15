@@ -84,6 +84,32 @@ flarum-tags:
     services: 服务
     stage: 舞台
     drama: 剧集
+    comics: 漫画
+    light-novel: 轻小说
+    film: 电影
+    photography: 摄影
+    documentary: 纪录片
+    adaptation: 改编
+    character: 角色
+    cosplay: Cosplay
+    doujin: 同人
+    end: 完结
+    fashion: 时尚
+    knowledge: 科普
+    merchandise: 周边
+    origianl: 原创
+    ost: OST
+    promotion: 推广
+    recommendation: 推荐
+    recruitment: 招聘
+    reproduction: 转载
+    reviews: 点评
+    scenario: 脚本
+    serial: 连载
+    short-story: 短篇
+    technical: 技术
+    tickets: 票务
+    trade: 交易
   tag_description:
     support: '使用 ACGN 服务时遇到的问题都可以在这里提问哦。'
     feedback: '大家可以在这里讨论 ACGN 服务的特色和设计。'

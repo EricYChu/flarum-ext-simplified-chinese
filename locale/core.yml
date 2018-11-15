@@ -39,13 +39,13 @@ core:
       google_recaptcha_site_key_placeholder: 'Google reCAPTCHA Site Key'
       google_recaptcha_secret_key_placeholder: 'Google reCAPTCHA Secret Key'
     dashboard:
-      beta_warning_text: 'This <strong>beta software</strong> is provided primarily so that you can help us test it and make it better; it should not be used in production.'
-      contributing_text: 'Want to look for bugs and contribute? Read the <a>Contributing docs</a>.'
-      extension_text: 'Interested in developing extensions? Read the <a>Extension docs</a>.'
-      features_text: 'Got an idea to improve a feature? Tell us about it under the <a>Features tag</a>.'
-      support_text: 'Found a bug? Please report it in our forum, under the <a>Support tag</a>.'
-      troubleshooting_text: 'Having problems? Follow the instructions in the <a>Troubleshooting docs</a>.'
-      version_text: 'Thanks for trying out Flarum! You are running version {version}.'
+      beta_warning_text: 此<strong>测试版软件</strong>主要是为了帮助我们测试并使其更好;它不应该用于生产。
+      contributing_text: '想要寻找错误并做出贡献？阅读<a>贡献文档</a> 。'
+      extension_text: '有兴趣开发扩展吗？阅读<a>扩展文档</a> 。'
+      features_text: 有改进功能的想法吗？在<a>功能标签</a>下告诉我们。
+      support_text: 发现了一个bug？请在我们的论坛中<a>支持标记</a>下进行报告。
+      troubleshooting_text: 有问题吗？按照<a>故障排除文档</a>的说明进行操作。
+      version_text: '感谢您试用Flarum！您正在运行版本{version} 。'
       welcome_text: 'Welcome to Flarum Beta!'
     edit_css:
       customize_text: '通过增加 LESS/CSS 代码以客制化论坛外观，此设置将覆盖 Flarum <a>默认样式</a>。'
@@ -168,6 +168,7 @@ core:
       submit_button: '=> core.ref.save_changes'
       verify_button: '=> core.ref.verify'
       title: '=> core.ref.change_phone'
+      confirm_title: 验证当前手机
     change_password:
       confirmation_message: 你已经成功更改密码。
       submit_button: '=> core.ref.save_changes'
@@ -281,6 +282,8 @@ core:
       edited_text: 已编辑
       edited_tooltip: '{username} 编辑于 {ago}'
       number_tooltip: '发布 #{number}'
+      translate_link: 翻译
+      original_link: 原文
     post_controls:
       delete_button: '=> core.ref.delete'
       delete_forever_button: '=> core.ref.delete_forever'
@@ -369,6 +372,10 @@ core:
       verification_code_placeholder: '=> core.ref.verification_code'
       verification_text: '安全起见，我们需要确认是由你本人注册。我们将发送 6 位数字的验证码到你的手机。'
       verification_message_sent_message: '验证码已发送到你的手机 {phone}。'
+      next_button: 下一步
+      send_button: 发送验证码
+      confirm_phone_title: 验证你的手机
+      send_error_message: 尝试发送验证码到你的手机时遇到错误。
     countries:
       af: 阿富汗
       al: 阿尔巴尼亚
